@@ -1,0 +1,29 @@
+//Algorithm for Russian Peasant Multiplication
+
+var a : int ;
+var b : int ;
+
+read(a);
+read(b);
+
+//We want to find the answer to a * b
+
+var A : int = a;
+var B : int = b;
+var C : int = 0; //The product A * B
+while(A != 0) {
+    var temp : int  = A;
+
+    while(temp > 0) {
+        temp = temp - 2;
+    }   
+
+    A = A / 2;
+
+    if(temp == -1) { //If it is odd
+        C = C + B;
+    }
+    B = B * 2;
+}
+
+print(C);

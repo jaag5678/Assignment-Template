@@ -69,7 +69,9 @@
 
     extern int g;
 
-#line 73 "Parser.tab.c" /* yacc.c:339  */
+    int yylex();
+
+#line 75 "Parser.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -159,7 +161,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 163 "Parser.tab.c" /* yacc.c:358  */
+#line 165 "Parser.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -460,11 +462,11 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    70,    70,    71,    73,    74,    75,    76,    77,    80,
-      81,    82,    84,    85,    86,    87,    90,    92,    95,    97,
-      99,   100,   101,   103,   104,   105,   107,   108,   109,   111,
-     112,   113,   114,   115,   117,   118,   119,   121,   122,   123,
-     125,   126,   127,   128,   130,   131,   132,   133,   134
+       0,    74,    74,    75,    77,    78,    79,    80,    81,    84,
+      85,    86,    88,    89,    90,    91,    94,    96,    99,   101,
+     103,   104,   105,   107,   108,   109,   111,   112,   113,   115,
+     116,   117,   118,   119,   121,   122,   123,   125,   126,   127,
+     129,   130,   131,   132,   134,   135,   136,   137,   138
 };
 #endif
 
@@ -1302,7 +1304,7 @@ yyreduce:
   switch (yyn)
     {
       
-#line 1306 "Parser.tab.c" /* yacc.c:1646  */
+#line 1308 "Parser.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1530,7 +1532,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 137 "Parser.y" /* yacc.c:1906  */
+#line 141 "Parser.y" /* yacc.c:1906  */
 
 
 int main (int argc, char *argv[]) {

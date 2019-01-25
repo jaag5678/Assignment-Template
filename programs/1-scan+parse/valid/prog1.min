@@ -1,21 +1,21 @@
+//Let us write a simple code to print a decimal number to binary
+
 var x : int;
-var d : int = 0;
 
-read (n);
-var c : string;
+read(x);
 
+while(x > 0) {
 
+    var a : int = x;
 
-while(n) {
-    read (c);
-    if(c == "D") {
-        d = d + 1;
+    while(a > 0) {
+        a = a - 2;
+    }
+    if(a == 0) {
+        print(0);
     }
     else {
-        d = d - 1;
+        print (1);
     }
-
-    print(d);
+    x = x / 2;
 }
-
-print (d);

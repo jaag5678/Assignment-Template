@@ -578,8 +578,13 @@ char *yytext;
 #include<stdlib.h>
 #include "Parser.tab.h"
 
+
+int yyerror (char const *s) {
+    fprintf (stderr, "Error: check line %d --> %s\n", yylineno, s);
+    exit(1);
+}
 int g = 0;
-#line 583 "Scan.c"
+#line 588 "Scan.c"
 
 #define INITIAL 0
 
@@ -797,10 +802,10 @@ YY_DECL
 		}
 
 	{
-#line 21 "Scanner_Update.l"
+#line 26 "Scanner_Update.l"
 
 
-#line 804 "Scan.c"
+#line 809 "Scan.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -869,257 +874,257 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 23 "Scanner_Update.l"
+#line 28 "Scanner_Update.l"
 {if(g) printf("tCOMMENT "); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 24 "Scanner_Update.l"
+#line 29 "Scanner_Update.l"
 { }
 	YY_BREAK
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 25 "Scanner_Update.l"
+#line 30 "Scanner_Update.l"
 {if(g) printf("tEOL \n");}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 27 "Scanner_Update.l"
+#line 32 "Scanner_Update.l"
 {if(g) printf("tVAR_DEC\n");
                 return VAR;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 29 "Scanner_Update.l"
+#line 34 "Scanner_Update.l"
 {if(g) printf("tDTYPE_S\n ");
                 return D_STRING;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 31 "Scanner_Update.l"
+#line 36 "Scanner_Update.l"
 {if(g) printf("tDTYPE_F \n");
                 return D_FLOAT;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 33 "Scanner_Update.l"
+#line 38 "Scanner_Update.l"
 {if(g) printf("tDTYPE_I \n");
                 return D_INT;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 35 "Scanner_Update.l"
+#line 40 "Scanner_Update.l"
 {if(g) printf("tDTYPE_B \n");
                 return D_BOOL;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 38 "Scanner_Update.l"
+#line 43 "Scanner_Update.l"
 {if(g) printf("tIF \n");
                 return IF;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 40 "Scanner_Update.l"
+#line 45 "Scanner_Update.l"
 {if(g) printf("tELSE\n ");
                 return ELSE;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 43 "Scanner_Update.l"
+#line 48 "Scanner_Update.l"
 {if(g) printf("tWHILE \n");
                 return WHILE;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 46 "Scanner_Update.l"
+#line 51 "Scanner_Update.l"
 {if(g) printf("tPRINT \n");
                 return PRINT;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 48 "Scanner_Update.l"
+#line 53 "Scanner_Update.l"
 {if(g) printf("tREAD \n");
                 return READ;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 51 "Scanner_Update.l"
+#line 56 "Scanner_Update.l"
 {if(g) printf("tNOT\n");
                 return NOT;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 53 "Scanner_Update.l"
+#line 58 "Scanner_Update.l"
 {if(g) printf("tASS\n");
                 return ASS;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 56 "Scanner_Update.l"
+#line 61 "Scanner_Update.l"
 {if(g) printf("tADD\n");
                 return ADD;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 58 "Scanner_Update.l"
+#line 63 "Scanner_Update.l"
 {if(g) printf("tMINUS\n");
                 return SUB;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 60 "Scanner_Update.l"
+#line 65 "Scanner_Update.l"
 {if(g) printf("tMUL\n ");
                 return MUL;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 62 "Scanner_Update.l"
+#line 67 "Scanner_Update.l"
 {if(g) printf("tDIV\n ");
                 return DIV;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 65 "Scanner_Update.l"
+#line 70 "Scanner_Update.l"
 {if(g) printf("tGEQ\n ");
                 return GEQ;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 67 "Scanner_Update.l"
+#line 72 "Scanner_Update.l"
 {if(g) printf("tLEQ\n ");
                 return LEQ;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 69 "Scanner_Update.l"
+#line 74 "Scanner_Update.l"
 {if(g) printf("tGT\n ");
                 return GT;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 71 "Scanner_Update.l"
+#line 76 "Scanner_Update.l"
 {if(g) printf("tLT \n");
                 return LT;}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 74 "Scanner_Update.l"
+#line 79 "Scanner_Update.l"
 {if(g) printf("tEQ\n ");
                 return EQ;}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 76 "Scanner_Update.l"
+#line 81 "Scanner_Update.l"
 {if(g) printf("tNEQ\n ");
                 return NEQ;}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 79 "Scanner_Update.l"
+#line 84 "Scanner_Update.l"
 {if(g) printf("tAND \n");
                 return AND;}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 81 "Scanner_Update.l"
+#line 86 "Scanner_Update.l"
 {if(g) printf("tOR \n");
                 return OR;}
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 84 "Scanner_Update.l"
+#line 89 "Scanner_Update.l"
 {if(g) printf("tOPEN_P\n ");
                 return CO;}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 86 "Scanner_Update.l"
+#line 91 "Scanner_Update.l"
 {if(g) printf("tCLOSE_P\n ");
                 return CC;}
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 89 "Scanner_Update.l"
+#line 94 "Scanner_Update.l"
 {if(g) printf("tOPEN_C \n");
                 return FO;}
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 91 "Scanner_Update.l"
+#line 96 "Scanner_Update.l"
 {if(g) printf("tCLOSE_C \n");
                 return FC;}
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 94 "Scanner_Update.l"
+#line 99 "Scanner_Update.l"
 {if(g) printf("tCOLON \n");
                 return COLON;}
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 97 "Scanner_Update.l"
-{if(g) printf("SEMCOLON \n");
+#line 102 "Scanner_Update.l"
+{if(g) printf("tSEMCOLON \n");
                 return SCOLON;}
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 102 "Scanner_Update.l"
+#line 107 "Scanner_Update.l"
 {if(g) printf("tINT(%s) \n", yytext);
                                 return INT;}
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 104 "Scanner_Update.l"
+#line 109 "Scanner_Update.l"
 {   yyerror("Invalid Integer ");
                                 printf("tERR_INT \n");
                                 return ERR;}
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 108 "Scanner_Update.l"
+#line 113 "Scanner_Update.l"
 {if(g) printf("tFLOAT(%s) \n", yytext);
                                 return FLOAT;}
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 110 "Scanner_Update.l"
+#line 115 "Scanner_Update.l"
 {   yyerror("Invalid Floating point number ");
                                 printf("tERR_FLOAT \n");
                                 return ERR;}
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 114 "Scanner_Update.l"
+#line 119 "Scanner_Update.l"
 {if(g) printf("tBOOL \n");
                                 return BOOL;}
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 117 "Scanner_Update.l"
+#line 122 "Scanner_Update.l"
 {if(g) printf("STRING(%s)\n", yytext);
                                                                                                                         return STRING;}         
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 120 "Scanner_Update.l"
+#line 125 "Scanner_Update.l"
 {if(g) printf("tIDENT(%s) \n", yytext);
                             return IDENT;}
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 123 "Scanner_Update.l"
+#line 128 "Scanner_Update.l"
 { yyerror("Invalid INput :(");
                 printf("tERR \n");
                 return ERR;}
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 127 "Scanner_Update.l"
+#line 132 "Scanner_Update.l"
 ECHO;
 	YY_BREAK
-#line 1123 "Scan.c"
+#line 1128 "Scan.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2132,13 +2137,8 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 127 "Scanner_Update.l"
+#line 132 "Scanner_Update.l"
 
 
 
-int yyerror (char const *s) {
 
-   
-    fprintf (stderr, "Error: check line %d --> %s", yylineno, s);
-    exit(1);
-}

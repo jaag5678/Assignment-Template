@@ -11,6 +11,11 @@
 #include<stdlib.h>
 #include "Parser.tab.h"
 
+
+int yyerror (char const *s) {
+    fprintf (stderr, "Error: check line %d --> %s\n", yylineno, s);
+    exit(1);
+}
 int g = 0;
 %}
 
@@ -94,7 +99,7 @@ int g = 0;
 ":"         {if(g) printf("tCOLON \n");
                 return COLON;}
 
-";"         {if(g) printf("SEMCOLON \n");
+";"         {if(g) printf("tSEMCOLON \n");
                 return SCOLON;}
 
 
@@ -126,9 +131,3 @@ int g = 0;
 
 %%
 
-int yyerror (char const *s) {
-
-   
-    fprintf (stderr, "Error: check line %d --> %s", yylineno, s);
-    exit(1);
-}

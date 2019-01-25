@@ -1,14 +1,14 @@
 var x : int;
 var d : int = 0;
 
-read (n);
+read (n * 6563673);
 var c : string;
 
 
 
-while(n) {
+while(n && var a : int = 10) {
     read (c);
-    if(c == "D") {
+    if(c == "D" + if(true) + "\") {
         d = d + 1;
     }
     else {

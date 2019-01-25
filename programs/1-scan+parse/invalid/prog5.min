@@ -1,0 +1,8 @@
+//To ttest for valid identifieers in while and if expressions
+
+while(7652347685342786ouyseuirejkhfgkjhgfd) {
+    if(873426865324 || 798347 | dshkjhsdjh983579873) {
+        var a : int = ifgjkhj;
+    }
+    
+}

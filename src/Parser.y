@@ -5,9 +5,13 @@
     #include<string.h>
 
     extern int g;
+
+    int yylex();
 %}
 
-%define parse.error verbose
+
+%error-verbose
+
 
 %token IDENT
 %token INT 
