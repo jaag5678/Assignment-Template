@@ -25,24 +25,24 @@ int g = 0;
 
 %%
 
-"//".*                {if(g) printf("tCOMMENT "); }
+"//".*                {if(g) printf("tCOMMENT\n"); }
 [ \t]+                  { }
-[\n]                    {if(g) printf("tEOL \n");}
+[\n]                    {if(g) printf("tEOL\n");}
 
 "var"       {if(g) printf("tVAR_DEC\n");
                 return VAR;}
-"string"    {if(g) printf("tDTYPE_S\n ");
+"string"    {if(g) printf("tDTYPE_S\n");
                 return D_STRING;}
-"float"     {if(g) printf("tDTYPE_F \n");
+"float"     {if(g) printf("tDTYPE_F\n");
                 return D_FLOAT;}
-"int"       {if(g) printf("tDTYPE_I \n");
+"int"       {if(g) printf("tDTYPE_I\n");
                 return D_INT;}
-"boolean"   {if(g) printf("tDTYPE_B \n");
+"boolean"   {if(g) printf("tDTYPE_B\n");
                 return D_BOOL;}
 
 "if"        {if(g) printf("tIF \n");
                 return IF;}
-"else"      {if(g) printf("tELSE\n ");
+"else"      {if(g) printf("tELSE\n");
                 return ELSE;}
 
 "while"     {if(g) printf("tWHILE \n");
@@ -62,23 +62,23 @@ int g = 0;
                 return ADD;}
 "-"         {if(g) printf("tMINUS\n");
                 return SUB;}
-"*"         {if(g) printf("tMUL\n ");
+"*"         {if(g) printf("tMUL\n");
                 return MUL;}
-"/"         {if(g) printf("tDIV\n ");
+"/"         {if(g) printf("tDIV\n");
                 return DIV;}
 
-">="        {if(g) printf("tGEQ\n ");
+">="        {if(g) printf("tGEQ\n");
                 return GEQ;}
-"<="        {if(g) printf("tLEQ\n ");
+"<="        {if(g) printf("tLEQ\n");
                 return LEQ;}
-">"         {if(g) printf("tGT\n ");
+">"         {if(g) printf("tGT\n");
                 return GT;}
-"<"         {if(g) printf("tLT \n");
+"<"         {if(g) printf("tLT\n");
                 return LT;}
 
-"=="        {if(g) printf("tEQ\n ");
+"=="        {if(g) printf("tEQ\n");
                 return EQ;}
-"!="        {if(g) printf("tNEQ\n ");
+"!="        {if(g) printf("tNEQ\n");
                 return NEQ;}
 
 "&&"        {if(g) printf("tAND \n");
@@ -86,9 +86,9 @@ int g = 0;
 "||"        {if(g) printf("tOR \n");
                 return OR;}
 
-"("         {if(g) printf("tOPEN_P\n ");
+"("         {if(g) printf("tOPEN_P\n");
                 return CO;}
-")"         {if(g) printf("tCLOSE_P\n ");
+")"         {if(g) printf("tCLOSE_P\n");
                 return CC;}
 
 "{"         {if(g) printf("tOPEN_C \n");

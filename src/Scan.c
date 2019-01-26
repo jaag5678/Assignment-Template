@@ -875,7 +875,7 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 28 "Scanner_Update.l"
-{if(g) printf("tCOMMENT "); }
+{if(g) printf("tCOMMENT\n"); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
@@ -886,7 +886,7 @@ case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
 #line 30 "Scanner_Update.l"
-{if(g) printf("tEOL \n");}
+{if(g) printf("tEOL\n");}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
@@ -897,25 +897,25 @@ YY_RULE_SETUP
 case 5:
 YY_RULE_SETUP
 #line 34 "Scanner_Update.l"
-{if(g) printf("tDTYPE_S\n ");
+{if(g) printf("tDTYPE_S\n");
                 return D_STRING;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 36 "Scanner_Update.l"
-{if(g) printf("tDTYPE_F \n");
+{if(g) printf("tDTYPE_F\n");
                 return D_FLOAT;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 38 "Scanner_Update.l"
-{if(g) printf("tDTYPE_I \n");
+{if(g) printf("tDTYPE_I\n");
                 return D_INT;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 40 "Scanner_Update.l"
-{if(g) printf("tDTYPE_B \n");
+{if(g) printf("tDTYPE_B\n");
                 return D_BOOL;}
 	YY_BREAK
 case 9:
@@ -927,7 +927,7 @@ YY_RULE_SETUP
 case 10:
 YY_RULE_SETUP
 #line 45 "Scanner_Update.l"
-{if(g) printf("tELSE\n ");
+{if(g) printf("tELSE\n");
                 return ELSE;}
 	YY_BREAK
 case 11:
@@ -975,49 +975,49 @@ YY_RULE_SETUP
 case 18:
 YY_RULE_SETUP
 #line 65 "Scanner_Update.l"
-{if(g) printf("tMUL\n ");
+{if(g) printf("tMUL\n");
                 return MUL;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
 #line 67 "Scanner_Update.l"
-{if(g) printf("tDIV\n ");
+{if(g) printf("tDIV\n");
                 return DIV;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
 #line 70 "Scanner_Update.l"
-{if(g) printf("tGEQ\n ");
+{if(g) printf("tGEQ\n");
                 return GEQ;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
 #line 72 "Scanner_Update.l"
-{if(g) printf("tLEQ\n ");
+{if(g) printf("tLEQ\n");
                 return LEQ;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
 #line 74 "Scanner_Update.l"
-{if(g) printf("tGT\n ");
+{if(g) printf("tGT\n");
                 return GT;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
 #line 76 "Scanner_Update.l"
-{if(g) printf("tLT \n");
+{if(g) printf("tLT\n");
                 return LT;}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
 #line 79 "Scanner_Update.l"
-{if(g) printf("tEQ\n ");
+{if(g) printf("tEQ\n");
                 return EQ;}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
 #line 81 "Scanner_Update.l"
-{if(g) printf("tNEQ\n ");
+{if(g) printf("tNEQ\n");
                 return NEQ;}
 	YY_BREAK
 case 26:
@@ -1035,13 +1035,13 @@ YY_RULE_SETUP
 case 28:
 YY_RULE_SETUP
 #line 89 "Scanner_Update.l"
-{if(g) printf("tOPEN_P\n ");
+{if(g) printf("tOPEN_P\n");
                 return CO;}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
 #line 91 "Scanner_Update.l"
-{if(g) printf("tCLOSE_P\n ");
+{if(g) printf("tCLOSE_P\n");
                 return CC;}
 	YY_BREAK
 case 30:
