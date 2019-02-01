@@ -110,7 +110,7 @@ int g = 0;
                                 printf("tERR_INT \n");
                                 return ERR;}
 
-0"."[0-9]*|[1-9]+"."[0-9]*  {if(g) printf("tFLOAT(%s) \n", yytext);
+0"."[0-9]*|[1-9]+"."[0-9]+  {if(g) printf("tFLOAT(%s) \n", yytext);
                                 return FLOAT;}
 [0-9]*"."[0-9]*             {   yyerror("Invalid Floating point number ");
                                 printf("tERR_FLOAT \n");
