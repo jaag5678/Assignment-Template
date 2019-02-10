@@ -28,4 +28,8 @@ fi
 #
 # You MUST replace the following command with the command for invoking your compiler
 
-./src/minic "$1" < "$2"
+name=${2%.*}
+ext=".c"
+c_file=$name$ext
+
+./src/minic "$1" $c_file < "$2"

@@ -1,0 +1,6 @@
+var s : string;
+
+s = "Akshay" + "Gopalakrishnan" + "Student" + "COMP520";
+
+print(s);
+

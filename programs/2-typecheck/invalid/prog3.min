@@ -1,0 +1,5 @@
+//To verify that declarations are beofre they are used
+
+print(x);
+
+var x : int;

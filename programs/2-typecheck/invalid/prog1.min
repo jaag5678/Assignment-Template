@@ -1,0 +1,4 @@
+//Test for declaration conflict
+
+var a : float = 100;
+var g : int = 100.001;

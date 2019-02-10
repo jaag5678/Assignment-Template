@@ -1,0 +1,10 @@
+//Program to check if loop conditions are of bool type 
+
+var a : int ;
+
+var g : int;
+
+//This condition should raise an error
+while(a) {
+    print (a);
+}

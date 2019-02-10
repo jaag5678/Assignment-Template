@@ -1,0 +1,4 @@
+//Program to test unary operation ! (only on bool)
+
+var a : int = !1000;
+

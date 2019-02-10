@@ -1,5 +1,7 @@
+#include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<stdbool.h>
 
 char *str_add(char *s1, char *s2) {
     char *s3 = (char *)malloc((strlen(s1) + strlen(s2)) * sizeof(char));
@@ -17,3 +19,8 @@ int bool_inp() {
         return 0;
     return -1;
 }
+
+int *tmpi;
+float *tmpf;
+char **tmps;
+bool *tmpb;

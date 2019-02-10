@@ -1,0 +1,5 @@
+//Program to check if conditions to be of bool only
+
+if(!3) {
+    print (5);
+}

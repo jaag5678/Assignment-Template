@@ -5,17 +5,21 @@
 
 #define HASH_SIZE 317
 
+//Structure for a particular symbol
 typedef struct Sym {
     int line_no;
     char *name;
     enum type datatype;
 }Sym;
 
+//Structure of symbol table
 typedef struct SymTab {
     Sym *table[HASH_SIZE];
     struct SymTab *parent_scope;
 }SymTab;
 
+//To decide based on the mode whether to print the symbols generated or not
+extern int typecheck_tag;
 
 //Function to build the entire symbol table
 int build_symbol_table(Statements *AST, SymTab *S);
