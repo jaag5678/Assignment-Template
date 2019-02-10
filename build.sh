@@ -1,6 +1,6 @@
 #!/bin/bash
 
 cd src
-bison -d -v Parser.y
+bison -d Parser.y
 flex -o Scan.c Scanner_Update.l
-gcc Parser.tab.c Scan.c -o minic -lfl
+gcc Scan.c Parser.tab.c tree.c pretty_print.c symbol_table.c code_gen.c -o minic -lfl
